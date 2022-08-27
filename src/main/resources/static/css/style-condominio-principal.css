@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.container {
+    width: 100%;
+    height: 92vh;
+    background-color: var(--backgroud);
+}
+
+
+.cards-div {
+    width: 100%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main.cards {
+    display: flex;
+    padding: 32px;
+}
+
+main.cards section.card {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    align-items: center;
+    padding: 1rem 1.5rem;
+    border-radius: 8px;
+    max-height: 256px;
+    margin-left: 32px;
+}
+
+main.cards section.card:first-child {
+    margin-left: 0px;
+} 
+
+main.cards section.card .icon {
+    width: 64px;
+    height: 64px;
+
+}
+main.cards section.card img {
+    width: 100%;
+}
+
+main.cards section.card h3 {
+    margin: 16px 0;
+}
+
+main.cards section.card span {
+    font-weight: 350;
+    max-width: 240px;
+    font-size: 90%;
+    margin-bottom: 16px;
+}
+
+
+main.cards section.card button {
+    padding: 0.5rem 1rem;
+    text-transform: uppercase;
+    border-radius: 32px;
+    border: none;
+    cursor: pointer;
+    background-color: white;
+}
+
+main.cards section.card a {
+    text-decoration: none;
+    font-size: 80%;
+    font-weight: 550;
+    color: rgb(0, 0, 0);
+}
+
+main.cards section.card button:hover {
+    background-color: rgba(168, 168, 235, 0.856);
+}
+
+main.cards section.card.n1 {
+    background: linear-gradient(to right, #56D195, #5ADB78);
+}
+main.cards section.card.n2  {
+    background: linear-gradient(to right, #32C980, #35D459);
+}
+main.cards section.card.n3  {
+    background: linear-gradient(to right, #77D435, #A6C932);
+}
+main.cards section.card.n1 {
+    box-shadow: 20px 20px 50px -30px var(--primary);
+}
+main.cards section.card.n2 {
+    box-shadow: 20px 20px 50px -30px var(--primary);
+}
+main.cards section.card.n3 {
+    box-shadow: 20px 20px 50px -30px var(--primary);
+} 
+/*Barra de Pesquisa*/
+
+.search {
+    width: 100%;
+    height: 7vh;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+.search-box {
+    height: 40px;
+    padding: 10px;
+    border-radius: 40px;
+    background: linear-gradient(to right, #56D195, #5ADB78);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.search-txt {
+    border: none;
+    background: none;
+    outline: none;
+    padding: 0;
+    color: aliceblue;
+    font-size: 14px;
+    font-weight: 600;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+
+.search-btn {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+}

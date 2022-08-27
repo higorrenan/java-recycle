@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperação</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/Home/favicon.ico"/>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-recuperar-senha.css/" />
+    <!--<a href="https://storyset.com/people">People illustrations by Storyset</a>-->
+</head>
+
+<body>
+<header>
+    <nav>
+        <img src="img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+        <ul class="nav-list">
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="a-hover"><a href="/login">Voltar</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-login">
+    <div class="left-login">
+        <h2>Esqueceu a senha?</br> Não se preocupe!</h2>
+        <img src="img/recuperar-senha.svg" class="left-login-image" alt="Animação-Empresa">
+    </div>
+    <div class="right-login">
+        <div class="card-login">
+            <h1>Esqueceu a senha?</h1>
+            <h3>Preencha os dados para redefinir</h3>
+            <div class="textfield">
+                <form  name="formRedefinir" th:action="@{/EnviarDadosSenha}" th:object="${usuario}"  method="post">
+                    <label >Email</label>
+                    <input type="email" name="email_usuario" placeholder="Email" th:field="*{email}">
+                    <label >CPF</label>
+                    <input type="cpf" name="cpf" placeholder="CPF" th:field="*{cpf}">
+
+                    <button class="btn-login" type="submit" onclick="return validar()">Continuar</button>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>

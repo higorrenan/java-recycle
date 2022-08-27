@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="pt=br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Agendamento</title>
+    <script languague="javascript"> 
+      function popup(){ window.open('termos-lgpd.html','popup','width=1280,height=720,scrolling=auto,top=0,left=0') }
+    </script> 
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style-condominio-agendamento.css">
+    
+    <!--<a href="https://storyset.com/city">City illustrations by Storyset</a>-->
+    <link rel="shortcut icon" type="image/jpg" href="../img/favicon.ico"/>
+</head>
+<body>
+    <header>
+        <nav>
+          <img src="../img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+
+          <ul class="nav-list">
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+          </ul>
+          <ul class="nav-list">
+            <li class="a-hover"><a href="/condominio">Voltar</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="cadastro">
+      <div class="container">
+        <div class="form">
+            <form  th:action="@{/salvarAgendamento}" th:object="${agendamento}" method="post">
+              <div class="form-header">
+                <div class="title">
+                    <h1>Agendamento</h1>
+                </div>
+              </div>
+              <div id="input-group">
+                <div class="input-box">
+                  <label for="nome-condominio">Nome</label>
+                  <input id="nome-condominio" type="text" name="nome" placeholder="Informe o nome do condominio" th:field="*{nome}" required >
+                </div>
+                <div class="input-box">
+                  <label for="cpf/cnpj">CPF ou CNPJ</label>
+                  <input id="cpf/cnpj" type="text" name="cpf" placeholder="Digite o CPF ou CNPJ" th:field="*{cpf}" required>
+                </div>
+                <div class="input-box">
+                  <label for="moradores">Moradores</label>
+                  <input id="moradores" type="text" name="moradores" placeholder="Digite a quantidade de moradores"th:field="*{apartamento}" required>
+                </div>
+                  <div class="security-select">
+                    <label for="recorrencia">Recorrência</label>
+                    <select name="recorrencia" id="">
+                      <option selected="" value="" disabled th:field="*{ferquencia}">Recorrência </option>
+                      <option value="semanal">Semanal</option>
+                      <option value="quinzenal">Quinzenal</option>
+                      <option value="mensal">Mensal</option>
+                    </select>
+                  </div>
+                <div class="data-hora">
+                  <div class="input-data">
+                    <label for="hora">Hora</label>
+                    <input id="hora" type="time" name="hora" placeholder="hora" th:field="*{horaDoAgendamento}"required>
+                  </div>
+                    <div class="data-hora">
+                        <div class="input-data">
+                            <label for="hora">Hora</label>
+                            <input id="hora" type="time" name="cnpj" placeholder="hora" th:field="*{cnpj}"required>
+                        </div>
+                  <div class="input-hora">
+                    <label for="data">Data</label>
+                    <input id="data" type="date" name="data" placeholder="data" th:field="*{diaDoAgendamento}"required>
+                  </div>
+                </div>
+              </div>
+
+        <div class="form-end">
+
+            <div class="cep-rua">
+              <div class="input-CEP">
+                <label for="cep" style="color: white;">CEP</label>
+                <input id="cep" type="text" name="cep" placeholder="EX:00000-000" th:field="*{cep}" required>
+              </div>
+              <div class="input-numero">
+                <label for="numero">Número</label>
+                <input id="numero" type="text" name="numero" placeholder="EX: 120" th:field="*{numero}" required>
+              </div>
+            </div>
+            <div class="input-box">
+              <label for="rua">Rua</label>
+              <input id="rua" type="text" name="rua" placeholder="Infome a Rua" th:field="*{rua}" required>
+           </div>
+           <div class="input-box">
+              <label for="Cidade">Cidade</label>
+              <input id="Cidade" type="text" name="Cidade" placeholder="Infome a Cidade" th:field="*{cidade}" required>
+           </div>
+           <div class="input-box">
+              <label for="Bairro">Bairro</label>
+              <input id="Bairro" type="text" name="Bairro" placeholder="Infome o Bairro" th:field="*{bairro}" required>
+           </div>
+           <div class="select-box">
+              <label for="Estado">Estado</label>
+              <select name="estado">
+                  <option selected="" value="" disabled th:field="*{estado}">Selecione o Estado (UF)</option>
+                  <option value="Acre">Acre</option>
+                  <option value="Alagoas">Alagoas</option>
+                  <option value="Amapá">Amapá</option>
+                  <option value="Amazonas">Amazonas</option>
+                  <option value="Bahia">Bahia</option>
+                  <option value="Ceará">Ceará</option>
+                  <option value="Distrito Federal">Distrito Federal</option>
+                  <option value="Espírito Santo">Espírito Santo</option>
+                  <option value="Goiás">Goiás</option>
+                  <option value="Maranhão">Maranhão</option>
+                  <option value="Mato Grosso">Mato Grosso</option>
+                  <option value="Mato Grosso do Sul">Mato Grosso do Sul</option>
+                  <option value="Minas Gerais">Minas Gerais</option>
+                  <option value="Pará">Pará</option>
+                  <option value="Paraíba">Paraíba</option>
+                  <option value="Paraná">Paraná</option>
+                  <option value="Pernambuco">Pernambuco</option>
+                  <option value="Piauí">Piauí</option>
+                  <option value="Rio de Janeiro">Rio de Janeiro</option>
+                  <option value="Rio Grande do Sul">Rio Grande do Sul</option>
+                  <option value="Rio Grande do Norte">Rio Grande do Norte</option>
+                  <option value="Rondônia">Rondônia</option>
+                  <option value="Roraima">Roraima</option>
+                  <option value="Santa Catarina">Santa Catarina</option>
+                  <option value="São Paulo">São Paulo</option>
+                  <option value="Sergipe">Sergipe</option>
+                  <option value="Tocantins">Tocantins</option>
+              </select>
+               <div class="continue-button">
+                   <button><a href="#">Continuar</a></button>
+               </div>
+           </div>
+          </form>
+        </div>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

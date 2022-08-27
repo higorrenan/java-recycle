@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Condominío</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/Home/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/style-condominio.css" />
+    <!--<a href="https://storyset.com/people">People illustrations by Storyset</a>-->
+</head>
+
+<body>
+<header>
+    <nav>
+        <img src="img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+        <ul class="nav-list">
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="a-hover"><a href="/index">Voltar</a></li>
+        </ul>
+    </nav>
+</header>
+
+<div class="main-login">
+    <div class="left-login">
+        <h2>Venha fazer parte da transformação</br> de um mundo melhor!</h2>
+        <img src="/img/animacao-floresta.svg" class="left-login-image" alt="Animação-Floresta">
+    </div>
+
+    <div class="right-login">
+        <h1>Condomínio</h1></br>
+        <div class="card-login">
+            <h1>login</h1>
+            <div class="textfield">
+                <form name="formLogin" th:action= "@{/efetuarLogin}" th:object="${usuario}" method="post" >
+                    <label for="cpf">CPF</label>
+                    <input id="cpf" type="cpf" name="cpf" placeholder="Digite o CPF ou CNPJ"  th:field="*{cpf}" required>
+                    <label >Senha</label>
+                    <input id="senha" type="password" name = "senha_usuario" placeholder="Digite a Senha"  th:field="*{senha}" required>
+                    <a href="/esqueceu-senha">Esqueceu Senha?</a>
+                    <div th:if="${erro != null}" th:text="${erro}" class="alert alert-danger" role="alert"></div>
+                    <button class="btn-login"  type="submit" onclick="return validar()">Login</button>
+                </form>
+            </div>
+        </div>
+    </div>
+
+</div>
+
+<footer>
+
+</footer>
+</body>
+</html>

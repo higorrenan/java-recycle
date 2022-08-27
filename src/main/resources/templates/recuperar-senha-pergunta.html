@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Recuperação</title>
+    <link rel="shortcut icon" type="image/jpg" href="img/Home/favicon.ico"/>
+    <link rel="stylesheet" href="/css/style.css" />
+    <link rel="stylesheet" href="/css/style-recuperar-pergunta.css" />
+    <!--<a href="https://storyset.com/people">People illustrations by Storyset</a>-->
+  </head>
+
+  <body>
+    <header>
+      <nav>
+        <img src="img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+        <ul class="nav-list">
+          <li class="a-hover"><a href="#"></a></li>
+          <li class="a-hover"><a href="#"></a></li>
+          <li class="a-hover"><a href="#"></a></li>
+          <li class="a-hover"><a href="#"></a></li>
+          <li class="a-hover"><a href="#"></a></li>
+        </ul>
+        <ul class="nav-list">
+          <li class="a-hover"><a href="/login">Voltar</a></li>
+        </ul>
+      </nav>
+    </header>
+        <div class="right-login">
+            <div class="card-login">
+                <h3>Responda a pergunta de segurança</h3>
+                <div class="textfield">
+                    <form  form action="EnviarResposta" th:object="${usuario}" method="post">
+                      <div class="security">
+                        <div class="security-select">
+                          <label for="security">Pergunta</label>
+                          <select name="security" id="">
+                            <option selected="" value="" disabled>Pergunta de Segurança</option>
+                            <option value="mae">Nome da sua mãe</option>
+                            <option value="pet">Nome do seu PET</option>
+                            <option value="fruta">Nome da Fruta Favorita</option>
+                          </select>
+                        </div>
+                        <div class="security-resposta">
+                          <label for="resposta">Resposta</label>
+                          <input id="resposta" type="text" name="resposta" placeholder="Resposta" required th:field="*{resposta}" >
+                        </div>
+                      </div>
+                    <button class="btn_redefinir">Continuar</button>
+                </form>
+              </div>
+            </div>
+        </div>
+  </body>
+</html>

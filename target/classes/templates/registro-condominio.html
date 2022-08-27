@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html  xmlns:th="http://www.thymeleaf.org" >
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <script languague="javascript"> 
+      function popup(){ window.open('termos-lgpd.html','popup','width=1280,height=720,scrolling=auto,top=0,left=0') }
+    </script>
+    <link rel="stylesheet" href="/css/main.css">
+    <link rel="stylesheet" href="/css/style-cadastro-cond.css">
+    <!--<a href="https://storyset.com/city">City illustrations by Storyset</a>-->
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+</head>
+<body>
+    <header>
+        <nav>
+          <img src="img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+          <ul class="nav-list">
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+          </ul>
+          <ul class="nav-list">
+            <li class="a-hover"><a href="/index">Voltar</a></li>
+          </ul>
+        </nav>
+      </header>
+      <div class="cadastro">
+      <div class="container">
+        <div class="form-image">
+            <div class="text">
+              <h1>Condomínio</h1>
+            </div>
+            <img src="img/Condominio.svg" alt="Imagem-Condominio" >
+        </div>
+        <div class="form">
+            <form  th:action="@{/salvarUsuario}" th:object="${usuario}" method="post">
+              <div class="form-header">
+                <div class="title">
+                    <h1>Cadastre-se</h1>
+                </div>
+                <div class="login-button">
+                    <button><a href="/login">Entrar</a></button>
+                </div>
+              </div>
+              <div class="input-group">
+                <div class="input-box">
+                    <div class="input-box">
+                        <label for="cpf">CPF ou CNPJ</label>
+                        <input id="cpf" type="text" name="cpf" placeholder="Digite o CPF"  th:field="*{cpf}" required>
+                    </div>
+                    <div class="input-box">
+                        <label for="sindico">Nome Sindico</label>
+                        <input id="sindico" type="text" name="sindico" placeholder="Nome do Sindico"  th:field="*{nome}" required>
+                    </div>
+                  <label for="email">Email</label>
+                  <input id="email" type="text" name="email" placeholder="Digite o Email"  th:field="*{email}" required>
+                </div>
+                  <div class="input-box">
+                      <label for="number">Telefone</label>
+                      <input id="number" type="tel" name="number" placeholder="Digite seu Telefone"  th:field="*{telefone}" required>
+                  </div>
+                <div class="input-box">
+                  <label for="senha">Senha</label>
+                  <input id="senha" type="password" name="senha" placeholder="Digite a Senha"  th:field="*{senha}" required>
+                </div>
+              </div>
+              <div class="security">
+                <div class="security-select">
+                  <label for="security" style="color: white;">Pergunta</label>
+                  <select name="security" id="security">
+                    <option selected="" value="" disabled>Pergunta de Segurança</option>
+                    <option value="mae">Nome da sua mãe</option>
+                    <option value="pet">Nome do seu PET</option>
+                    <option value="fruta">Nome da Fruta Favorita</option>
+                  </select>
+                </div>
+                <div class="security-resposta">
+                  <label for="resposta" style="color: white;">Resposta</label>
+                  <input id="resposta" type="text" name="resposta" placeholder="Resposta"  th:field="*{resposta}" required>
+                </div>
+              </div>
+              <div class="check-box">
+                <input type="checkbox" id="lgpd" name="lgpd">
+                <label for="lgpd"><a href="/lgpd">Concordo com os termos da LGPD</a></label>
+              </div>
+              <div class="continue-button">
+                <button   type="submit"  href="/usuario"   value="Submit">Continuar</button>
+              </div>
+            </form>
+        </div>
+      </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Condominio</title>
+    <script type='text/javascript' src="main.js"></script>
+    <link rel="stylesheet" href="css/style-administrador-condominio.css">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="shortcut icon" type="image/jpg" href="img/favicon.ico"/>
+</head>
+<body page='lista'>
+    <header>
+        <nav>
+          <img src="img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+          <ul class="nav-list">
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+            <li class="a-hover"><a href="#"></a></li>
+          </ul>
+          <ul class="nav-list">
+            <li class="a-hover"><a href="/index">Voltar</a></li>
+          </ul>
+        </nav>
+      </header>
+    <div class="container">
+    <div id='listaRegistros'>
+        <div class="listaRegistros-cont">
+        <div class="search">
+            <div class="search-box">
+                <input class="search-txt" placeholder="PESQUISAR" autofocus id='inputPesquisa'/>
+                <a href="#" class="search-bnt"><img src="/img/lupa.png" alt="Search" height="20"></a>
+            </div>
+            <div class="text-table">
+              <h1>Condominio</h1>
+            </div>
+        </div>
+    <table>
+        <tr>
+            <th>Nome Completo</th>
+            <th>E-mail</th>
+            <th>CPF</th>
+            <th>Remover</th>
+        </tr>
+        <tr th:each = "usuario : ${usuario}">
+            <td th:text = "${usuario.nome}"></td>
+            <td th:text = "${usuario.email}"></td>
+            <td th:text = "${usuario.cpf}"></td>
+            <td><i id="icon_remover" class="fa fa-trash"
+                   aria-hidden="true" > <a th:href="@{/delete/{cpf}(cpf=${usuario.cpf})}"> <img src="img/excluir.png"
+                                                                                                    alt="icon-lixeira"
+                                                                                                    width="32px"> </a> </i></td>
+
+        </tr>
+
+
+    </table>
+    </form>
+    </div>
+    </div>
+    </div>
+</body>
+</html>

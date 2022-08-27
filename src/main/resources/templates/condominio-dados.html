@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Dados</title>
+    <link rel="shortcut icon" type="image/jpg" href="../img/Home/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/confing.css" />
+    <link rel="stylesheet" href="css/style-condominio-dados.css">
+    <!--<a href="https://storyset.com/people">People illustrations by Storyset</a>-->
+</head>
+<body>
+<header>
+    <nav>
+        <img src="img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+        <div class="mobile-menu">
+            <div class="line1"></div>
+            <div class="line2"></div>
+            <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a href="#">Agendamento</a></li>
+            <li><a href="#">Coleta</a></li>
+            <li class="cor-unica"><a href="#">Dados</a></li>
+        </ul>
+        <ul class="nav-list">
+            <li class="a-hover"><a href="/usuario">Voltar</a></li>
+        </ul>
+    </nav>
+</header>
+<div class="cadastro">
+    <div class="container">
+        <div class="form-image">
+            <div class="text">
+                <h1>Condomínio</h1>
+            </div>
+            <img src="img/Condominio.svg" alt="Imagem-Condominio" >
+        </div>
+        <div class="form">
+            <form action="#" th:action="@{/atualizar}" th:object="${usuario}" method="post">
+                <input type = "hidden" th:field="*{cpf}" >
+                <input type = "hidden" th:field="*{telefone}" >
+                <div class="form-header">
+                    <div class="title">
+                        <h1>Dados</h1>
+                    </div>
+                </div>
+                <div class="input-group">
+                    <div class="input-box">
+                        <div class="input-box">
+                            <label for="email">Email</label>
+                            <input id="email" type="text" name="email" placeholder="Digite o Email"  th:field="*{email}" required>
+                        </div>
+                        <div class="input-box">
+                            <label for="sindico">Nome Sindico</label>
+                            <input id="sindico" type="text" name="sindico" placeholder="Nome do Sindico"  th:field="*{nome}" required>
+                        </div>
+                        <label for="senha">Senha</label>
+                        <input id="senha" type="password" name="senha" placeholder="Digite a Senha"  th:field="*{senha}" required>
+                    </div>
+                </div>
+                <div class="security">
+                    <div class="security-select">
+                        <label for="security" style="color: white;">Pergunta</label>
+                        <select name="security" id="security">
+                            <option selected="" value="" disabled>Pergunta de Segurança</option>
+                            <option value="mae">Nome da sua mãe</option>
+                            <option value="pet">Nome do seu PET</option>
+                            <option value="fruta">Nome da Fruta Favorita</option>
+                        </select>
+                    </div>
+                    <div class="security-resposta">
+                        <label for="resposta" style="color: white;">Resposta</label>
+                        <input id="resposta" type="text" name="resposta" placeholder="Resposta"  th:field="*{resposta}" required>
+                    </div>
+                </div>
+                <div class="check-box">
+                    <input type="checkbox" id="alteracao" name="alteracao">
+                    <label for="alteracao"><a href="#">Deseja alterar os dados.</a></label>
+                </div>
+                <div class="continue-button">
+                    <button  class="btn_salvar" type = "submit">Alterar</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+</body>
+</html>

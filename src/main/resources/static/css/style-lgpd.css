@@ -1,0 +1,19 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    font-family: 'Noto Sans', sans-serif;
+}
+.container{
+    display: flex;
+    background-color: #61c45a3f;
+}
+.text-lgpd pre {
+    padding: 20px;
+    width: ;
+    font-size: 10pt;
+}
+
+.text-lgpd h1 {
+    text-align: center;
+    margin-top: 20px;
+}

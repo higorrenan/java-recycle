@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="pt-br" xmlns:th="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Principal Condominio</title>
+    <link rel="shortcut icon" type="image/jpg" href="../img/favicon.ico"/>
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/main.css" />
+    <link rel="stylesheet" href="../css/style-condominio-principal.css">
+    <!--<a href="https://storyset.com/people">People illustrations by Storyset</a>-->
+  </head>
+  <body>
+    <header>
+      <nav>
+        <img src="../img/Logo-Recycle-Transparente.png" alt="Logotipo RECycle" height="75px">
+        <div class="mobile-menu">
+          <div class="line1"></div>
+          <div class="line2"></div>
+          <div class="line3"></div>
+        </div>
+        <ul class="nav-list">
+            <li><a href="/agendamentos-usuario">Agendamento</a></li>
+            <li><a href="/coleta">Coleta</a></li>
+            <li><a class="botao" th:href = "|/editarUsuario?cpf=${session.usuarioLogado.cpf}|"> <span> Dados </span><i
+                    class="fa fa-cog" aria-hidden="true"></i></a></li>
+        </ul>
+        <ul class="nav-list">
+          <li class="a-hover"><a href="/index">Sair</a></li>
+        </ul>
+      </nav>
+    </header>
+    <div class="container">
+        <div class="search">
+          <div class="search-box">
+            <input type="text" class="search-txt" placeholder="Pesquisar">
+            <a href="#" class="search-bnt"><img src="/img/lupa.png" alt="Search" height="20"></a>
+          </div>
+        </div>
+        <div class="cards-div">
+        <main class="cards">
+            <section class="card n1">
+              <div class="icon">
+                <img src="../img/Lixeira01.png" alt="Lixeira_Reciclagem" width="100px">
+              </div>      
+                <h3>Empresa Reciclagem LTDA</h3>
+                    <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                    <button type="subimit"><a th:href = "@{/AgendamentoUsuario}">Agendar</a></button>
+            </section>
+            <section class="card n2">
+              <div class="icon">
+                <img src="../img/Lixeira02.png" alt="Lixeira_Reciclagem" width="100px">
+              </div>  
+                <h3>Empresa Recycle LTDA</h3>
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                <button><a href="/Telas-Condominio/condominio-agendamento.html">Agendar</a></button>
+            </section>
+            <section class="card n3">
+              <div class="icon">
+                <img src="../img/Usina01.png" alt="Usina_Reciclagem" width="100px">
+              </div>
+                <h3>Corporativa Reciclagem LT</h3>
+                <span>Lorem ipsum dolor sit amet consectetur, adipisicing elit.</span>
+                <button><a href="/Telas-Condominio/condominio-agendamento.html">Agendar</a></button>
+            </section>
+        </main>
+        </div>
+        
+    </div>
+   </body>
+</html>

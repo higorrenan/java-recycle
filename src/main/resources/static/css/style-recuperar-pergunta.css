@@ -1,0 +1,132 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: 'Noto Sans', sans-serif;
+    box-sizing: border-box;
+}
+
+.right-login{
+    width: 100vw;
+    height: 92vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.security-select {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 12px;
+}
+
+.security-select > label {
+    margin-bottom: 12px;
+}
+
+.security-resposta {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 10px;
+}
+
+
+.security-resposta > input {
+    width: 22vw;
+    margin: 0.6rem 0;
+    padding: 0.8rem 1.2rem;
+    border: none;
+    border-radius: 8px;
+    color: rgb(96, 110, 97) ;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.security-select > select {
+    border: none;
+    padding: 4px;
+    background-color: white;
+    border-radius: 8px;
+    margin-left: ;
+}
+
+.card-login{
+    width: 30%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 40px 45px;
+    background: #42bd39f1 ;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    text-transform: uppercase;
+}
+
+.card-login > h3 {
+    font-size: 12pt;
+    color: #000000;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 20px;
+}
+
+
+.textfield > form{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px 0px;
+}
+
+.textfield form > input {
+    width: 250px;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #acdaa8e7;
+    color: rgb(96, 110, 97) ;
+    font-size: 12pt;
+    outline: none;
+    box-sizing: border-box;
+    box-shadow: 0px 10px 40px #00000056;
+}
+
+.textfield > label {
+    color: white;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color: rgb(96, 110, 97) ;
+}
+
+.textfield > a {
+    margin: 12px 5px;
+    text-decoration: none;
+    color: white;
+    font-weight: 550;
+}
+.textfield > a:hover {
+    color: #3432C9;
+    transition: 0.6s;
+}
+
+form .btn-login {
+    width: 70%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 8px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 2.5px;
+    color: white ;
+    text-shadow: 0.1em 0.1em 0.05em rgb(56, 158, 61);
+    background-color: rgba(0, 0, 0, 0.568);
+    cursor: pointer;
+    box-shadow: 0px 10px 40px -12px black ;
+}

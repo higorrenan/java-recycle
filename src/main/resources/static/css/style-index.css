@@ -1,0 +1,358 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&display=swap');
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: 'Noto Sans', sans-serif;
+}
+
+.container {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    height: 265vh;
+    width: 100vw;
+    background: var(--backgroud); 
+}
+
+.topo {
+    width: 100vw;
+    height: 88vh;
+    display: flex;
+    justify-content:center ;
+    align-items: center;
+    
+}
+ /*Topo  SITE*/
+div.topo div.principal-text .ajude.t1  {
+    text-transform: uppercase;
+    font-weight: 800;
+    font-size: 38pt;
+    text-shadow: 1px 1px 0px var(--primary);
+}
+
+div.topo div.principal-text div.ajude.t2  {
+    font-weight: 600;
+    font-size: 40pt;
+    display: flex;
+}
+
+div.topo div.principal-text div.ajude.t2 span {
+    margin-left: 2rem;
+    margin-top: 1rem;
+}
+
+div.topo div.principal-text .recicle img  {
+    width: 20rem;
+    display: flex;
+    margin-left: 1.6rem;
+}
+
+div.topo div.principal-text p {
+    width: 26rem;
+    font-size: 13pt;
+    font-weight: 600;
+    margin-left: 4rem;
+    word-wrap: break-word;
+    display: flex;
+}
+
+/*Topo  SITE*/
+
+
+div.principal-text {
+    height: 50vh;
+    width: 50vw;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+
+
+.content {
+    height: 50vh;
+    width: 30vh;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.content .slide img {
+    height: 100%;
+    width: 100%;
+}
+
+.navigation {
+    height: 42vh;
+    width: 50vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bar {
+    cursor: pointer;
+    transform: .5s ease;
+    margin: 0px 10px;
+
+}
+
+
+.bar img:hover {
+    width: 44px;
+    transition: 0.2s;
+}
+
+input {
+  display: none;
+}
+
+.slides {
+    display: flex;
+    width: 500%;
+    height: 100%;
+}
+
+.slide {
+    width: 20%;
+    transition: .6s;
+}
+
+#slide1:checked ~ .s1 {
+    margin-left: 0;
+} 
+
+#slide2:checked ~ .s1 {
+    margin-left: -20%;
+} 
+
+#slide3:checked ~ .s1 {
+    margin-left: -40%;
+} 
+
+#slide4:checked ~ .s1 {
+    margin-left: -60%;
+} 
+
+/* Texto Sobre o RECYCLE*/
+
+.sobre {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 60vh;
+}
+
+div.planeta img {
+    width: 35%;
+    height: 50vh;
+    display: flex;
+}
+
+div.texto-sobre {
+    width: 50%;
+    height: 50vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-left: 30px;
+}
+
+div.texto-sobre div.text-planeta > h2 {
+   display: flex;
+   font-size: 23pt;
+   font-weight: 800;
+   text-shadow: 1px 1px 0px var(--primary);
+}
+
+div.texto-sobre div.text-surgimento > p {
+    display: flex;
+    width: 550px;
+    font-weight: 50;
+    text-align: justify;
+    padding-top: 30px;
+}
+
+div.texto-sobre div.text-planeta .recicle  {
+    font-weight: 800;
+    margin-left: 10px;
+    margin-right: 10px;
+    color:  var(--primary);
+    height: 4px;
+}
+
+div.sobre div.planeta > img {
+    width: 35vw;
+}
+
+/*3º Parte Tutorial*/
+
+.tutorial {
+    display: flex;
+    width: 100%;
+    height: 60vh;
+    justify-content: center;
+    align-items: center;
+}
+
+.texto-tutorial {
+    width: 50%;
+    height: 60vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+.texto-tutorial h2 {
+    width: 80%;
+    font-weight: 800;
+    text-transform: uppercase;
+    font-size: 22pt;
+    text-shadow: 1px 1px 0px var(--primary);
+}
+.texto-tutorial p {
+    margin-top: 20px;
+    font-size: 12pt;
+    font-weight: 500;
+}
+
+
+.video-tutorial {
+    width: 40%;
+    height: 60vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.video-tutorial iframe {
+    border: double 12px black;
+    width: 110%;
+    height: 40vh;
+}
+
+/*Caixa de Cadastro FIXA*/
+.box {
+    width:50%;
+       height:110px;
+       position:absolute;
+       z-index:100;
+       display: flex;
+       flex-direction: column;
+       bottom: 5%;
+       align-items: center;
+}
+
+.box-cadastro {
+    display: flex;
+}
+
+.box-cadastro button {
+    width: 15rem;
+    height: 3rem;
+    margin: 0px 7px;
+    border-radius: 20px;
+    font-weight: 600;
+    font-size: 15pt;
+    background: none;
+    cursor: pointer;
+    transition: all .8s;
+    border: solid 2px var(--primary);
+  
+     /* offset-x | offset-y | blur-radius | spread-radius | color */
+     box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+     color: white;
+}
+
+.box-cadastro{
+    margin-top: 20px;
+}
+.box-cadastro a {
+    text-decoration: none;
+    text-transform: uppercase;
+    color: black;
+
+}
+
+.cadastro-empresa {
+    margin-right: 10px;
+}
+.cadastro-empresa button {
+}
+
+.cadastro-condominio {
+    margin-left: 10px;
+}
+
+
+.box h4 {
+    font-weight: 800;
+    font-size: 18pt;
+    text-transform: uppercase;
+    color: var(--primary);
+}
+
+.box-cadastro > div button:hover {
+      -webkit-transform: scale(1.1);
+      transform: scale(1.1);
+      background-color: rgba(65, 189, 57, 0.4);
+  }
+
+  /*Fim Caixa de Cadastro FIXA*/
+
+  
+.sobre-desenvolvedores {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    width: 100%;
+    height: 50vh;
+}
+
+.sobre-desenvolvedores > h1 {
+    margin: 5rem 0px;
+    color: var(--primary);        
+
+}
+
+.pic-dev {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+/* fim Tamanho dos Container*/
+
+/*Hover Fotos Desenvolvedores*/
+.fotos-dev img:hover {
+    -webkit-transform: scale(1.2);
+    transform: scale(1.2);
+}
+
+/* Tamanho das Fotos e distanciamento */
+.fotos-dev {
+    height: 128px;
+    width: 128px;
+    margin: 0px 3rem;
+}
+
+.fotos-dev > a > h3 {
+    display: flex;
+    text-align: center;
+    color: var(--primary);
+    margin-top: 13px;
+}
+
+.fotos-dev > a {
+    text-decoration: none;
+}
+
+.fotos-dev > a > img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 50%;
+    -webkit-transition: all 0.7s ease;
+    transition: all 0.7s ease;
+}
